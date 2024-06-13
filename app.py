@@ -32,7 +32,7 @@ def item_find(text: str):
 
         for k, v in enumerate(success_search_list):
             print(f'Совпадение №{k+1}\n')
-            print(v)
+            print()
             print('\n#################\n')
 
 
@@ -43,7 +43,7 @@ def command_add():
     while check_phone:
         phone = input('Введите телефон: ').strip().replace(
             '(', '').replace(')', '').replace('-', '')
-        if len(phone) == 12:
+        if len(phone) == 13:
             check_phone = False
             dict_data['phone'] = phone
         else:
