@@ -64,8 +64,6 @@ def command_add():
 
     global data
 
-    data = get_data_from_file()
-
 
 def command_len():
     print(len(data))
