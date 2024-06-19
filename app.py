@@ -63,6 +63,7 @@ def command_add():
     print('Запись успешно добавлена')
 
     global data
+    data = get_data_from_file()
 
 
 def command_len():
