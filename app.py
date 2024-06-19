@@ -42,8 +42,8 @@ def command_add():
     check_phone = True
     while check_phone:
         phone = input('Введите телефон: ').strip().replace(
-            '(', '').replace(')', '').replace('-', '')
-        if len(phone) == 13:
+            '(', '').replace(')', '').replace('-', '').replace(' ', '')
+        if len(phone) == 11:
             check_phone = False
             dict_data['phone'] = phone
         else:
