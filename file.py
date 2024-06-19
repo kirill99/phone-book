@@ -21,6 +21,9 @@ def get_data_from_file(path: str = 'db.txt') -> list[Item]:
     with open(path, '+rb') as f:
         file_data = f.read().decode('UTF-8')
 
+    if file_data == '':
+        return []
+
     list_of_data = file_data.split('\n')
     transform_data = []
 
