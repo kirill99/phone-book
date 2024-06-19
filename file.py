@@ -45,4 +45,4 @@ def set_data_to_file(data: list[str], path: str = 'db.txt'):
         _create_db_file(path)
 
     with open(path, 'a') as f:
-        f.write('\n' + '|'.join([]))
+        f.write('\n' + '|'.join(data))
