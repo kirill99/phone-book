@@ -95,8 +95,6 @@ def hello():
     print('\n')
     print('Удачи!')
 
-    exit()
-
 
 def good_bye():
     """
@@ -127,4 +125,4 @@ def start():
             for i in commands.keys():
                 print(f'{i} - {commands[i][0]}')
         else:
-            item_find('')
+            item_find(input_text)

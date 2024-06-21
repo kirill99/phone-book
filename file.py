@@ -34,10 +34,9 @@ def get_data_from_file(path: str = 'db.txt') -> list[Item]:
                 full_name=data[0],
                 phone=data[1],
                 email=data[2],
-                address=data[4]
+                address=data[3]
             )
         )
-    transform_data.clear()
     return transform_data
 
 
