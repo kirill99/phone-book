@@ -15,13 +15,12 @@ def get_commands():
 
 
 def item_find(text: str):
+    global data
     success_search_list = []
 
     for i in data:
         for item in i.items():
-            if len(text):
-                continue
-            sub = str(item[1])
+            sub = str(item[1]).lower().strip()
             if sub.find(text.lower().strip()) != -1:
                 success_search_list.append(' \n'.join(
                     [f'{j[0]} - {j[1]}' for j in i.items()]))
@@ -34,7 +33,7 @@ def item_find(text: str):
 
         for k, v in enumerate(success_search_list):
             print(f'Совпадение №{k+1}\n')
-            print()
+            print(v)
             print('\n#################\n')
 
 
@@ -117,8 +116,8 @@ def start():
     global data
     data = get_data_from_file()
     commands = get_commands()
-    input_text = input('-> ')
     while True:
+        input_text = input('-> ')
 
         if input_text in commands:
             commands[input_text][1]()
