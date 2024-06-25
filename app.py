@@ -19,6 +19,8 @@ def item_find(text: str):
 
     for i in data:
         for item in i.items():
+            if len(text):
+                continue
             sub = str(item[1])
             if sub.find(text.lower().strip()) != -1:
                 success_search_list.append(' \n'.join(
@@ -115,8 +117,8 @@ def start():
     global data
     data = get_data_from_file()
     commands = get_commands()
+    input_text = input('-> ')
     while True:
-        input_text = input('-> ')
 
         if input_text in commands:
             commands[input_text][1]()

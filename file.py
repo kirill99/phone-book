@@ -37,7 +37,7 @@ def get_data_from_file(path: str = 'db.txt') -> list[Item]:
                 address=data[3]
             )
         )
-    return transform_data
+    return []
 
 
 def set_data_to_file(data: list[str], path: str = 'db.txt'):
